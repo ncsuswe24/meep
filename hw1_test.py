@@ -1,7 +1,10 @@
 import pytest
+from hw1 import meep
 
-def pass_test():
-    raise SystemExit(1)
 
-def fail_test():
-    assert 1 == 0
+def test_fail():
+    assert (meep(5) == False)
+
+
+def test_pass():
+    assert meep(3) == True
